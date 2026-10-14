@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GudangModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Barang1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Barang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MerekId" Type="Int32" />
+    <Property Name="KategoriId" Type="Int32" />
+    <Property Name="HargaBeli" Type="Int32" />
+    <Property Name="HargaJual" Type="Int32" />
+    <Property Name="BarangFoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Merek" Relationship="Self.FK_Barang1_Merek" FromRole="Barang1" ToRole="Merek" />
+    <NavigationProperty Name="Kategory" Relationship="GudangModel.FK_Barang1_Kategory" FromRole="Barang1" ToRole="Kategory" />
+    <NavigationProperty Name="Mutasis" Relationship="GudangModel.FK_Mutasi_Barang1" FromRole="Barang1" ToRole="Mutasi" />
+    <NavigationProperty Name="StokBarangs" Relationship="GudangModel.FK_StokBarang_Barang1" FromRole="Barang1" ToRole="StokBarang" />
+    <NavigationProperty Name="StokTokoes" Relationship="GudangModel.FK_StokToko_Barang1" FromRole="Barang1" ToRole="StokToko" />
+  </EntityType>
+  <EntityType Name="DetailPenjualan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PenjualanId" Type="Int32" />
+    <Property Name="BarangId" Type="Int32" />
+    <Property Name="Qty" Type="Int32" />
+    <Property Name="HargaSatuan" Type="Int32" />
+    <NavigationProperty Name="Penjualan" Relationship="Self.FK_DetailPenjualan_Penjualan" FromRole="DetailPenjualan" ToRole="Penjualan" />
+  </EntityType>
+  <EntityType Name="Merek">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Merek1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Barang1" Relationship="Self.FK_Barang1_Merek" FromRole="Merek" ToRole="Barang1" />
+  </EntityType>
+  <EntityType Name="Mutasi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TokoId" Type="Int32" />
+    <Property Name="BarangId" Type="Int32" />
+    <Property Name="Jumlah" Type="Int32" />
+    <Property Name="Tanggal" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Barang1" Relationship="GudangModel.FK_Mutasi_Barang1" FromRole="Mutasi" ToRole="Barang1" />
+    <NavigationProperty Name="Toko" Relationship="GudangModel.FK_Mutasi_Toko" FromRole="Mutasi" ToRole="Toko" />
+  </EntityType>
+  <EntityType Name="Penjualan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TokoId" Type="Int32" />
+    <Property Name="Total" Type="Int32" />
+    <Property Name="Tanggal" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="DetailPenjualans" Relationship="Self.FK_DetailPenjualan_Penjualan" FromRole="Penjualan" ToRole="DetailPenjualan" />
+    <NavigationProperty Name="Toko" Relationship="Self.FK_Penjualan_Toko" FromRole="Penjualan" ToRole="Toko" />
+  </EntityType>
+  <EntityType Name="StokBarang">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BarangId" Type="Int32" />
+    <Property Name="Jumlah" Type="Int32" />
+    <NavigationProperty Name="Barang1" Relationship="GudangModel.FK_StokBarang_Barang1" FromRole="StokBarang" ToRole="Barang1" />
+  </EntityType>
+  <EntityType Name="StokToko">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TokoId" Type="Int32" />
+    <Property Name="BarangId" Type="Int32" />
+    <Property Name="Jumlah" Type="Int32" />
+    <NavigationProperty Name="Barang1" Relationship="GudangModel.FK_StokToko_Barang1" FromRole="StokToko" ToRole="Barang1" />
+    <NavigationProperty Name="Toko" Relationship="GudangModel.FK_StokToko_Toko" FromRole="StokToko" ToRole="Toko" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Toko">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Toko1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Alamat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Penjualans" Relationship="Self.FK_Penjualan_Toko" FromRole="Toko" ToRole="Penjualan" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_User_Toko" FromRole="Toko" ToRole="User" />
+    <NavigationProperty Name="Mutasis" Relationship="GudangModel.FK_Mutasi_Toko" FromRole="Toko" ToRole="Mutasi" />
+    <NavigationProperty Name="StokTokoes" Relationship="GudangModel.FK_StokToko_Toko" FromRole="Toko" ToRole="StokToko" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TokoId" Type="Int32" />
+    <NavigationProperty Name="Toko" Relationship="Self.FK_User_Toko" FromRole="User" ToRole="Toko" />
+  </EntityType>
+  <EntityType Name="Kategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kategori" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Barang1" Relationship="GudangModel.FK_Barang1_Kategory" FromRole="Kategory" ToRole="Barang1" />
+  </EntityType>
+  <Association Name="FK_Barang1_Merek">
+    <End Role="Merek" Type="Self.Merek" Multiplicity="0..1" />
+    <End Role="Barang1" Type="Self.Barang1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Merek">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Barang1">
+        <PropertyRef Name="MerekId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetailPenjualan_Penjualan">
+    <End Role="Penjualan" Type="Self.Penjualan" Multiplicity="0..1" />
+    <End Role="DetailPenjualan" Type="Self.DetailPenjualan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Penjualan">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DetailPenjualan">
+        <PropertyRef Name="PenjualanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Penjualan_Toko">
+    <End Role="Toko" Type="Self.Toko" Multiplicity="0..1" />
+    <End Role="Penjualan" Type="Self.Penjualan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Toko">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Penjualan">
+        <PropertyRef Name="TokoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Toko">
+    <End Role="Toko" Type="Self.Toko" Multiplicity="0..1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Toko">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="TokoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GudangEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Barang1" EntityType="Self.Barang1" />
+    <EntitySet Name="DetailPenjualans" EntityType="Self.DetailPenjualan" />
+    <EntitySet Name="Mereks" EntityType="Self.Merek" />
+    <EntitySet Name="Mutasis" EntityType="Self.Mutasi" />
+    <EntitySet Name="Penjualans" EntityType="Self.Penjualan" />
+    <EntitySet Name="StokBarangs" EntityType="Self.StokBarang" />
+    <EntitySet Name="StokTokoes" EntityType="Self.StokToko" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Tokoes" EntityType="Self.Toko" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Kategories" EntityType="Self.Kategory" />
+    <AssociationSet Name="FK_Barang1_Merek" Association="Self.FK_Barang1_Merek">
+      <End Role="Merek" EntitySet="Mereks" />
+      <End Role="Barang1" EntitySet="Barang1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetailPenjualan_Penjualan" Association="Self.FK_DetailPenjualan_Penjualan">
+      <End Role="Penjualan" EntitySet="Penjualans" />
+      <End Role="DetailPenjualan" EntitySet="DetailPenjualans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Penjualan_Toko" Association="Self.FK_Penjualan_Toko">
+      <End Role="Toko" EntitySet="Tokoes" />
+      <End Role="Penjualan" EntitySet="Penjualans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Toko" Association="Self.FK_User_Toko">
+      <End Role="Toko" EntitySet="Tokoes" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Barang1_Kategory" Association="GudangModel.FK_Barang1_Kategory">
+      <End Role="Kategory" EntitySet="Kategories" />
+      <End Role="Barang1" EntitySet="Barang1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mutasi_Barang1" Association="GudangModel.FK_Mutasi_Barang1">
+      <End Role="Barang1" EntitySet="Barang1" />
+      <End Role="Mutasi" EntitySet="Mutasis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StokBarang_Barang1" Association="GudangModel.FK_StokBarang_Barang1">
+      <End Role="Barang1" EntitySet="Barang1" />
+      <End Role="StokBarang" EntitySet="StokBarangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StokToko_Barang1" Association="GudangModel.FK_StokToko_Barang1">
+      <End Role="Barang1" EntitySet="Barang1" />
+      <End Role="StokToko" EntitySet="StokTokoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mutasi_Toko" Association="GudangModel.FK_Mutasi_Toko">
+      <End Role="Toko" EntitySet="Tokoes" />
+      <End Role="Mutasi" EntitySet="Mutasis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StokToko_Toko" Association="GudangModel.FK_StokToko_Toko">
+      <End Role="Toko" EntitySet="Tokoes" />
+      <End Role="StokToko" EntitySet="StokTokoes" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_Barang1_Kategory">
+    <End Type="GudangModel.Kategory" Role="Kategory" Multiplicity="0..1" />
+    <End Type="GudangModel.Barang1" Role="Barang1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Barang1">
+        <PropertyRef Name="KategoriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mutasi_Barang1">
+    <End Type="GudangModel.Barang1" Role="Barang1" Multiplicity="0..1" />
+    <End Type="GudangModel.Mutasi" Role="Mutasi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Barang1">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mutasi">
+        <PropertyRef Name="BarangId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StokBarang_Barang1">
+    <End Type="GudangModel.Barang1" Role="Barang1" Multiplicity="0..1" />
+    <End Type="GudangModel.StokBarang" Role="StokBarang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Barang1">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="StokBarang">
+        <PropertyRef Name="BarangId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StokToko_Barang1">
+    <End Type="GudangModel.Barang1" Role="Barang1" Multiplicity="0..1" />
+    <End Type="GudangModel.StokToko" Role="StokToko" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Barang1">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="StokToko">
+        <PropertyRef Name="BarangId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mutasi_Toko">
+    <End Type="GudangModel.Toko" Role="Toko" Multiplicity="0..1" />
+    <End Type="GudangModel.Mutasi" Role="Mutasi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Toko">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Mutasi">
+        <PropertyRef Name="TokoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StokToko_Toko">
+    <End Type="GudangModel.Toko" Role="Toko" Multiplicity="0..1" />
+    <End Type="GudangModel.StokToko" Role="StokToko" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Toko">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="StokToko">
+        <PropertyRef Name="TokoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

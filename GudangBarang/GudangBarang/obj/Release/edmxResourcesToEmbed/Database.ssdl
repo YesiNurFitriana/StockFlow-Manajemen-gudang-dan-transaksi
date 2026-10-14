@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GudangModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Barang1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Barang" Type="nvarchar" MaxLength="50" />
+    <Property Name="MerekId" Type="int" />
+    <Property Name="KategoriId" Type="int" />
+    <Property Name="HargaBeli" Type="int" />
+    <Property Name="HargaJual" Type="int" />
+    <Property Name="BarangFoto" Type="image" />
+  </EntityType>
+  <EntityType Name="DetailPenjualan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PenjualanId" Type="int" />
+    <Property Name="BarangId" Type="int" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="HargaSatuan" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Gudang.dbo.Kategory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Kategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kategori" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Merek">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Merek" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Mutasi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TokoId" Type="int" />
+    <Property Name="BarangId" Type="int" />
+    <Property Name="Jumlah" Type="int" />
+    <Property Name="Tanggal" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Penjualan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TokoId" Type="int" />
+    <Property Name="Total" Type="int" />
+    <Property Name="Tanggal" Type="datetime" />
+  </EntityType>
+  <EntityType Name="StokBarang">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BarangId" Type="int" />
+    <Property Name="Jumlah" Type="int" />
+  </EntityType>
+  <EntityType Name="StokToko">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TokoId" Type="int" />
+    <Property Name="BarangId" Type="int" />
+    <Property Name="Jumlah" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Toko">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Toko" Type="nvarchar" MaxLength="50" />
+    <Property Name="Alamat" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Role" Type="nvarchar" MaxLength="50" />
+    <Property Name="TokoId" Type="int" />
+  </EntityType>
+  <Association Name="FK_Barang1_Merek">
+    <End Role="Merek" Type="Self.Merek" Multiplicity="0..1" />
+    <End Role="Barang1" Type="Self.Barang1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Merek">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Barang1">
+        <PropertyRef Name="MerekId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetailPenjualan_Penjualan">
+    <End Role="Penjualan" Type="Self.Penjualan" Multiplicity="0..1" />
+    <End Role="DetailPenjualan" Type="Self.DetailPenjualan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Penjualan">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DetailPenjualan">
+        <PropertyRef Name="PenjualanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Penjualan_Toko">
+    <End Role="Toko" Type="Self.Toko" Multiplicity="0..1" />
+    <End Role="Penjualan" Type="Self.Penjualan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Toko">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Penjualan">
+        <PropertyRef Name="TokoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Toko">
+    <End Role="Toko" Type="Self.Toko" Multiplicity="0..1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Toko">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="TokoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GudangModelStoreContainer">
+    <EntitySet Name="Barang1" EntityType="Self.Barang1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetailPenjualan" EntityType="Self.DetailPenjualan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Merek" EntityType="Self.Merek" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mutasi" EntityType="Self.Mutasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Penjualan" EntityType="Self.Penjualan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StokBarang" EntityType="Self.StokBarang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StokToko" EntityType="Self.StokToko" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Toko" EntityType="Self.Toko" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kategory" EntityType="Self.Kategory" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Kategory].[Id] AS [Id], 
+    [Kategory].[Kategori] AS [Kategori]
+    FROM [dbo].[Kategory] AS [Kategory]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Barang1_Merek" Association="Self.FK_Barang1_Merek">
+      <End Role="Merek" EntitySet="Merek" />
+      <End Role="Barang1" EntitySet="Barang1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetailPenjualan_Penjualan" Association="Self.FK_DetailPenjualan_Penjualan">
+      <End Role="Penjualan" EntitySet="Penjualan" />
+      <End Role="DetailPenjualan" EntitySet="DetailPenjualan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Penjualan_Toko" Association="Self.FK_Penjualan_Toko">
+      <End Role="Toko" EntitySet="Toko" />
+      <End Role="Penjualan" EntitySet="Penjualan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Toko" Association="Self.FK_User_Toko">
+      <End Role="Toko" EntitySet="Toko" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

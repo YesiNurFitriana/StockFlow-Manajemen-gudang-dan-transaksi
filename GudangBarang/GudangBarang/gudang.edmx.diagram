@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a6d65be50db84a2881dc07edd3abba29" Name="Diagram1">
+        <EntityTypeShape EntityType="GudangModel2.Barang1" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GudangModel2.DetailPenjualan" Width="1.5" PointX="7.5" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GudangModel2.Kategory" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GudangModel2.Merek" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GudangModel2.Mutasi" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GudangModel2.Penjualan" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GudangModel2.StokBarang" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GudangModel2.StokToko" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GudangModel2.Toko" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GudangModel2.User" Width="1.5" PointX="5.25" PointY="13.75" IsExpanded="true" />
+        <AssociationConnector Association="GudangModel2.FK_Barang1_Kategory" ManuallyRouted="false" />
+        <AssociationConnector Association="GudangModel2.FK_Barang1_Merek" ManuallyRouted="false" />
+        <AssociationConnector Association="GudangModel2.FK_Mutasi_Barang1" ManuallyRouted="false" />
+        <AssociationConnector Association="GudangModel2.FK_StokBarang_Barang1" ManuallyRouted="false" />
+        <AssociationConnector Association="GudangModel2.FK_StokToko_Barang1" ManuallyRouted="false" />
+        <AssociationConnector Association="GudangModel2.FK_DetailPenjualan_Penjualan" ManuallyRouted="false" />
+        <AssociationConnector Association="GudangModel2.FK_Mutasi_Toko" ManuallyRouted="false" />
+        <AssociationConnector Association="GudangModel2.FK_Penjualan_Toko" ManuallyRouted="false" />
+        <AssociationConnector Association="GudangModel2.FK_StokToko_Toko" ManuallyRouted="false" />
+        <AssociationConnector Association="GudangModel2.FK_User_Toko" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

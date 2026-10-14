@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GudangModel2StoreContainer" CdmEntityContainer="GudangEntities2">
+    <EntitySetMapping Name="Barang1">
+      <EntityTypeMapping TypeName="GudangModel2.Barang1">
+        <MappingFragment StoreEntitySet="Barang1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Barang" ColumnName="Barang" />
+          <ScalarProperty Name="MerekId" ColumnName="MerekId" />
+          <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+          <ScalarProperty Name="HargaBeli" ColumnName="HargaBeli" />
+          <ScalarProperty Name="HargaJual" ColumnName="HargaJual" />
+          <ScalarProperty Name="BarangFoto" ColumnName="BarangFoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetailPenjualans">
+      <EntityTypeMapping TypeName="GudangModel2.DetailPenjualan">
+        <MappingFragment StoreEntitySet="DetailPenjualan">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PenjualanId" ColumnName="PenjualanId" />
+          <ScalarProperty Name="BarangId" ColumnName="BarangId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="HargaSatuan" ColumnName="HargaSatuan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategories">
+      <EntityTypeMapping TypeName="GudangModel2.Kategory">
+        <MappingFragment StoreEntitySet="Kategory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Kategori" ColumnName="Kategori" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mereks">
+      <EntityTypeMapping TypeName="GudangModel2.Merek">
+        <MappingFragment StoreEntitySet="Merek">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Merek1" ColumnName="Merek" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mutasis">
+      <EntityTypeMapping TypeName="GudangModel2.Mutasi">
+        <MappingFragment StoreEntitySet="Mutasi">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TokoId" ColumnName="TokoId" />
+          <ScalarProperty Name="BarangId" ColumnName="BarangId" />
+          <ScalarProperty Name="Jumlah" ColumnName="Jumlah" />
+          <ScalarProperty Name="Tanggal" ColumnName="Tanggal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Penjualans">
+      <EntityTypeMapping TypeName="GudangModel2.Penjualan">
+        <MappingFragment StoreEntitySet="Penjualan">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TokoId" ColumnName="TokoId" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Tanggal" ColumnName="Tanggal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StokBarangs">
+      <EntityTypeMapping TypeName="GudangModel2.StokBarang">
+        <MappingFragment StoreEntitySet="StokBarang">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BarangId" ColumnName="BarangId" />
+          <ScalarProperty Name="Jumlah" ColumnName="Jumlah" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StokTokoes">
+      <EntityTypeMapping TypeName="GudangModel2.StokToko">
+        <MappingFragment StoreEntitySet="StokToko">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TokoId" ColumnName="TokoId" />
+          <ScalarProperty Name="BarangId" ColumnName="BarangId" />
+          <ScalarProperty Name="Jumlah" ColumnName="Jumlah" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tokoes">
+      <EntityTypeMapping TypeName="GudangModel2.Toko">
+        <MappingFragment StoreEntitySet="Toko">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Toko1" ColumnName="Toko" />
+          <ScalarProperty Name="Alamat" ColumnName="Alamat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="GudangModel2.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="TokoId" ColumnName="TokoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

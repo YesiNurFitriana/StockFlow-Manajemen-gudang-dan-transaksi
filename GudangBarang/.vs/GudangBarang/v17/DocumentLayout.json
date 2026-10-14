@@ -1,0 +1,180 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GudangBarang\\GudangBarang\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|d:\\gudangbarang\\gudangbarang\\gudangbarang\\databarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|solutionrelative:gudangbarang\\databarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|d:\\gudangbarang\\gudangbarang\\gudangbarang\\databarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|solutionrelative:gudangbarang\\databarang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|D:\\GudangBarang\\GudangBarang\\GudangBarang\\Alert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|solutionrelative:GudangBarang\\Alert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|D:\\GudangBarang\\GudangBarang\\GudangBarang\\Kategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|solutionrelative:GudangBarang\\Kategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|D:\\GudangBarang\\GudangBarang\\GudangBarang\\MainToko.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|solutionrelative:GudangBarang\\MainToko.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|D:\\GudangBarang\\GudangBarang\\gudangbarang\\transaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|solutionrelative:gudangbarang\\transaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|D:\\GudangBarang\\GudangBarang\\GudangBarang\\Transaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|solutionrelative:GudangBarang\\Transaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|D:\\GudangBarang\\GudangBarang\\GudangBarang\\Database.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|solutionrelative:GudangBarang\\Database.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|D:\\GudangBarang\\GudangBarang\\GudangBarang\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|solutionrelative:GudangBarang\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|D:\\GudangBarang\\GudangBarang\\GudangBarang\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B6FABFE2-BB7B-49EE-98E0-BE2F5A187F2A}|GudangBarang\\GudangBarang.csproj|solutionrelative:GudangBarang\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataBarang.cs [Design]",
+              "DocumentMoniker": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\DataBarang.cs",
+              "RelativeDocumentMoniker": "GudangBarang\\DataBarang.cs",
+              "ToolTip": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\DataBarang.cs [Design]",
+              "RelativeToolTip": "GudangBarang\\DataBarang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T16:21:41.506Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataBarang.cs",
+              "DocumentMoniker": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\DataBarang.cs",
+              "RelativeDocumentMoniker": "GudangBarang\\DataBarang.cs",
+              "ToolTip": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\DataBarang.cs",
+              "RelativeToolTip": "GudangBarang\\DataBarang.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T16:19:56.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Alert.cs",
+              "DocumentMoniker": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\Alert.cs",
+              "RelativeDocumentMoniker": "GudangBarang\\Alert.cs",
+              "ToolTip": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\Alert.cs",
+              "RelativeToolTip": "GudangBarang\\Alert.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T16:19:52.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Kategory.cs",
+              "DocumentMoniker": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\Kategory.cs",
+              "RelativeDocumentMoniker": "GudangBarang\\Kategory.cs",
+              "ToolTip": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\Kategory.cs",
+              "RelativeToolTip": "GudangBarang\\Kategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T16:19:40.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainToko.cs",
+              "DocumentMoniker": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\MainToko.cs",
+              "RelativeDocumentMoniker": "GudangBarang\\MainToko.cs",
+              "ToolTip": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\MainToko.cs",
+              "RelativeToolTip": "GudangBarang\\MainToko.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:20:40.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Transaksi.cs [Design]",
+              "DocumentMoniker": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\Transaksi.cs",
+              "RelativeDocumentMoniker": "GudangBarang\\Transaksi.cs",
+              "ToolTip": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\Transaksi.cs [Design]",
+              "RelativeToolTip": "GudangBarang\\Transaksi.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T02:52:49.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Transaksi.cs",
+              "DocumentMoniker": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\Transaksi.cs",
+              "RelativeDocumentMoniker": "GudangBarang\\Transaksi.cs",
+              "ToolTip": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\Transaksi.cs",
+              "RelativeToolTip": "GudangBarang\\Transaksi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:25:30.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Database.edmx [Diagram1]",
+              "DocumentMoniker": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\Database.edmx",
+              "RelativeDocumentMoniker": "GudangBarang\\Database.edmx",
+              "ToolTip": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\Database.edmx [Diagram1]",
+              "RelativeToolTip": "GudangBarang\\Database.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-02-18T02:32:32.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\Form1.cs",
+              "RelativeDocumentMoniker": "GudangBarang\\Form1.cs",
+              "ToolTip": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\Form1.cs",
+              "RelativeToolTip": "GudangBarang\\Form1.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwA0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T06:21:38.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\App.config",
+              "RelativeDocumentMoniker": "GudangBarang\\App.config",
+              "ToolTip": "D:\\GudangBarang\\GudangBarang\\GudangBarang\\App.config",
+              "RelativeToolTip": "GudangBarang\\App.config",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAYwBgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-10-12T15:34:53.491Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
